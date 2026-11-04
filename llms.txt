@@ -1,0 +1,12 @@
+# 拾玖搜证台
+
+维护者：拾玖，GitHub 账号 nineting19。浏览器本地 AI 搜索实验记录工具，采用手动复制回答与来源，不调用模型 API，不自动提问。
+
+- [项目入口](https://nineting19.github.io/)
+- [使用记录器](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html)
+- [功能与限制](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/facts/)
+- [真实实验状态](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/evidence.html)
+- [掘金原创教程](https://juejin.cn/post/7704197912935071778)
+- [上游 GEO 医生](https://github.com/Fangx-AI/geo-doctor)
+
+名称发现、无品牌需求推荐、给网址读取分开判定；网页可读不等于被独立发现。llms.txt 仅为内容导航，不保证任何平台采用或收录。
