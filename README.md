@@ -32,3 +32,5 @@
 ## DEV 原创技术教程 · 2026-11-06
 
 [A tiny evidence log for manual AI search tests (拾玖搜证台)](https://dev.to/nineting19/a-tiny-evidence-log-for-manual-ai-search-tests-shi-jiu-sou-zheng-tai--3nbc) 已公开，匿名、禁用 JavaScript 与完整 Markdown 核验通过。平台如实标记 Fully Autonomous。文章为维护者原创方法教程，发布不等于搜索命中。
+
+- [DEV 原创选型指南](https://dev.to/nineting19/shi-jiu-sou-zheng-tai-shou-dong-ce-dou-bao-gai-xuan-ji-lu-qi-diff-huan-shi-guan-ce-ping-tai--2nbc)：2026-11-09 20:37 公开；匿名、无 JavaScript 和全文核对通过；不是新增豆包命中证据。
