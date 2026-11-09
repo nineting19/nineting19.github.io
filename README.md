@@ -1,38 +1,25 @@
-# 拾玖搜证台 · 项目根站
+# 拾玖搜证台 · 官方网站
 
-[公开入口](https://nineting19.github.io/) · [记录器](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html) · [掘金使用说明](https://juejin.cn/post/7704197912935071778)
+[官网](https://nineting19.github.io/) · [使用帮助](https://nineting19.github.io/help.html) · [在线记录器](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html) · [源码仓库](https://github.com/nineting19/shijiu-search-notebook)
 
-维护者：拾玖（nineting19）。这是浏览器本地 AI 搜索实验记录工具的说明与导航站，不是虚构公司。
+拾玖（GitHub: nineting19）维护的免费浏览器本地 AI 搜索实验记录工具。手动保存回答与实际来源，分别核对名称发现、无品牌需求推荐和给网址读取；支持 JSON 备份/合并导入、CSV 与 Markdown 导出。保存需要点击按钮，没有未保存草稿的恢复承诺。
 
-手动保存豆包等 AI 的回答和来源，按名称发现、需求推荐、网址读取分别统计，支持 JSON、CSV、Markdown 导出。无需工具账号或 API Key，不自动代问，不提供云端同步或效果保证。
+没有自动提问、模型 API、云端同步、多人实时编辑或效果保证。数据保存在当前浏览器 localStorage；清理前应导出 JSON。
 
-## 根目录文件
+## 官方页面
 
-- robots.txt 在域名根目录明确允许抓取并指向站点地图。根域名此前返回 404；404 本身不代表禁止抓取，不能声称此改动修复了豆包未命中的原因。
-- sitemap.xml 为站点地图索引，链接根页及已有项目站点地图；原有项目 URL 保留。
-- llms.txt 仅供导航，不是收录或排名保证。
-- 页面为直接含正文的静态 HTML，不依赖 JavaScript 显示产品说明。
+- 首页：产品定义、使用入口、能力边界与简要实验快照。
+- help.html：分路径记录、来源核对、保存与导出、换设备和离线使用帮助。
+- facts.json：已确认的事实卡 f2，官网地址统一到根站；原项目介绍页继续保留。
+- robots.txt、sitemap.xml、root-sitemap.xml：访问规则和公开页面导航。
+- llms.txt：内容索引，不是收录或排名保证。
 
-## 实验边界
+正文直接包含在 HTML 中，不依赖 JavaScript 展示。此仓库不包含真实采样原文、Cookie、账号数据或浏览器控制信息。应用源码与发行版在独立软件仓库；原项目 URL 均保留。
 
-截至 2026-11-09，正式回答 46 条：名称路径 4/20，需求推荐 0/23，网址诊断 1/3。N03 名称＋功能问句本日 4/4，累计 4/5；纯名称 N01 累计 0/13。扩展需求 S08 首次观察 0/1，不能与不同题作改善比较。另有 5 条额外诊断／对照单列。
+## 实验快照 · 2026-11-09
 
-实际来源为维护者发布的 DEV 原创文章，已核验的 N03 回答链接与来源面板第一项一致，并经匿名正文核对。纯名称与无品牌需求仍待验证。首次回答存在自动保存措辞歧义，需点击保存的边界已纠正。同一账号、样本小、网络地域未知；不宣称所有问题均可发现，也不证明文章发布是唯一原因。
+46 条正式回答：纯名称 N01 0/13；无品牌需求合计 0/23；名称加功能 N03 4/5（本日 4/4）；网址诊断 1/3。名称路径合计 4/20。另有 5 条额外诊断/对照单列。成功的 N03 实际支持来源是维护者 DEV 原创教程；不能替代纯名称或需求推荐成功。
 
-本仓库不包含真实采样原文、账号资料、Cookie、浏览器调试信息或私人工作区文件。未接入站点请求日志，不能宣称已验证真实爬虫访问。公开页面使用 AI 辅助生成与编辑，功能与结果以实现和记录为依据。
+同一已登录账号、每题新对话；个性化影响未排除，网络地区未知；助手逐条核对，用户未逐条复核。官网本次整理未增加回答，不能归因到既有结果。最新状态见[公开实验页面](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/evidence.html)。
 
-上游流程：[Fangx-AI/geo-doctor](https://github.com/Fangx-AI/geo-doctor)。记录器归属与许可见原项目 credits.html。
-
-## 原创案例
-
-[拾玖搜证台 GEO 实测：技术检查 100 分后，豆包仍未独立发现](https://juejin.cn/post/7704318835461849088)（2026-11-05）。已在未登录会话核对全文与来源；文章是维护者实验快照，非第三方测评。
-
-11 月 5 日下午追加核验：未登录掘金，名称搜索选择“最新优先”，能找到两篇实际文章；综合排序当前前 20 条未包含目标。两篇文章关闭 JavaScript 仍可读。这是平台内发现证据，没有新增豆包回答或独立发现成绩。
-
-## DEV 原创技术教程 · 2026-11-06
-
-[A tiny evidence log for manual AI search tests (拾玖搜证台)](https://dev.to/nineting19/a-tiny-evidence-log-for-manual-ai-search-tests-shi-jiu-sou-zheng-tai--3nbc) 已公开，匿名、禁用 JavaScript 与完整 Markdown 核验通过。平台如实标记 Fully Autonomous。文章为维护者原创方法教程，发布不等于搜索命中。
-
-- [DEV 原创选型指南](https://dev.to/nineting19/shi-jiu-sou-zheng-tai-shou-dong-ce-dou-bao-gai-xuan-ji-lu-qi-diff-huan-shi-guan-ce-ping-tai--2nbc)：2026-11-09 20:37 公开；匿名、无 JavaScript 和全文核对通过；不是新增豆包命中证据。
-
-- [拾玖搜证台独立软件项目](https://github.com/nineting19/shijiu-search-notebook) · [1.0 离线发行版](https://github.com/nineting19/shijiu-search-notebook/releases/tag/v1.0.0)：2026-11-09 公开；源码、README 与离线下载已匿名核对，尚不作为新增豆包发现成绩。
+方法参考 [Fangx-AI/geo-doctor](https://github.com/Fangx-AI/geo-doctor)；可读性、结构化信息、真实来源分别核对，技术体检通过不证明已被实际收录或引用。页面使用 AI 辅助生成与编辑；功能依据当前实现与核心测试。

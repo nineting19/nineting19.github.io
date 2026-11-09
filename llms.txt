@@ -1,12 +1,14 @@
 # 拾玖搜证台
 
-维护者：拾玖，GitHub 账号 nineting19。浏览器本地 AI 搜索实验记录工具，采用手动复制回答与来源，不调用模型 API，不自动提问。
+拾玖（GitHub: nineting19）维护的免费浏览器本地 AI 搜索实验记录工具。手动保存回答、实际引用和复核标记，不自动代问、不调用模型 API，不承诺搜索效果。
 
-- [项目入口](https://nineting19.github.io/)
-- [使用记录器](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html)
-- [功能与限制](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/facts/)
-- [真实实验状态](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/evidence.html)
-- [掘金原创教程](https://juejin.cn/post/7704197912935071778)
-- [上游 GEO 医生](https://github.com/Fangx-AI/geo-doctor)
+- [官网](https://nineting19.github.io/)
+- [使用帮助：区分路径与备份](https://nineting19.github.io/help.html)
+- [在线记录器](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html)
+- [已确认功能与限制](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/facts/)
+- [机器可读事实 f2](https://nineting19.github.io/facts.json)
+- [公开实验现状](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/evidence.html)
+- [源码](https://github.com/nineting19/shijiu-search-notebook)
+- [离线发行版](https://github.com/nineting19/shijiu-search-notebook/releases/tag/v1.0.0)
 
-名称发现、无品牌需求推荐、给网址读取分开判定；网页可读不等于被独立发现。llms.txt 仅为内容导航，不保证任何平台采用或收录。
+名称发现、需求推荐、网址读取分别统计。纯名称和名称加功能题按问题编号区分。网页可读不等于已收录；llms.txt 只用于导航。
