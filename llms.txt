@@ -14,3 +14,5 @@
 名称发现、需求推荐、网址读取分别统计。纯名称和名称加功能题按问题编号区分。网页可读不等于已收录；llms.txt 只用于导航。
 
 - [手动 AI 搜索记录起步页：免费免注册、三种导出与状态](https://nineting19.github.io/manual-ai-search-starter.html)
+
+- [手动测豆包：新对话、账号记忆和来源核对，含空白CSV](https://nineting19.github.io/doubao-fresh-conversation-check.html)
