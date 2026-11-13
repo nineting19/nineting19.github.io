@@ -16,3 +16,11 @@
 - [手动测豆包：三类结果留证、空白复核表与可打印工作单](https://nineting19.github.io/manual-ai-search-starter.html)
 
 - [手动测豆包：新对话、账号记忆和来源核对，含空白CSV](https://nineting19.github.io/doubao-fresh-conversation-check.html)
+
+## 直接取用的配套材料
+
+- [单文件离线留证材料包](https://nineting19.github.io/resources/manual-ai-search-evidence-kit.html)
+- [可填写、打印与导出Markdown的空白工作单](https://nineting19.github.io/resources/manual-evidence-worksheet.html)
+- [36列空白复核CSV](https://nineting19.github.io/resources/manual-search-review-ledger.csv)
+
+工作单与CSV是独立人工底稿，不是记录器JSON导入文件；记录器1.0的实现限制见使用帮助与facts.json补记。

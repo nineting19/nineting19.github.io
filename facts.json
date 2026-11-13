@@ -186,5 +186,23 @@
     "url": "https://github.com/nineting19"
   },
   "website": "https://nineting19.github.io/",
-  "repository": "https://github.com/nineting19/shijiu-search-notebook"
+  "repository": "https://github.com/nineting19/shijiu-search-notebook",
+  "publicNotesReviewedOn": "2026-11-13",
+  "entryPoints": {
+    "officialWebsite": "https://nineting19.github.io/",
+    "onlineRecorder": "https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html",
+    "manualReviewWorksheet": "https://nineting19.github.io/resources/manual-evidence-worksheet.html",
+    "offlineMaterials": "https://nineting19.github.io/resources/manual-ai-search-evidence-kit.html"
+  },
+  "implementationBoundaries": {
+    "appliesTo": "记录器1.0；补记不改变已冻结事实卡f2",
+    "screenshots": "没有截图上传、预览或附件打包；文件另存，备注可写文件名。",
+    "sourceChecks": "网址格式校验与人工核验标记，不自动检测页面可达性或事实支持。",
+    "csvVersions": "CSV题集／事实卡列固定为q1／f1；其他批次依据冻结输入另存校正副本，保留原导出。",
+    "answerAccuracy": "人工标记汇总不能代替阅读全文和逐条事实复核。",
+    "savedRecordEditing": "界面不提供已保存记录原地编辑；JSON按id去重合并，不覆盖同id记录。",
+    "memory": "新对话等勾选只记录人工条件，不改变被测平台账号记忆设置。",
+    "worksheet": "配套工作单独立于记录器数据库，不自动保存；导出的Markdown不是记录器JSON导入文件。",
+    "evidence": "https://nineting19.github.io/help.html"
+  }
 }
