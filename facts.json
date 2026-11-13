@@ -204,5 +204,13 @@
     "memory": "新对话等勾选只记录人工条件，不改变被测平台账号记忆设置。",
     "worksheet": "配套工作单独立于记录器数据库，不自动保存；导出的Markdown不是记录器JSON导入文件。",
     "evidence": "https://nineting19.github.io/help.html"
+  },
+  "fieldProvenance": {
+    "appliesTo": "记录器1.0；源代码与隔离合成练习核验于2026-11-13；不改变冻结事实卡f2",
+    "created": "点击保存时自动生成的记录保存时间；CSV日期列取该值，不是自动读取的AI问答发生时间。",
+    "kind": "选择内置预设题目时预选，使用者可手工修改；保存当前选择，不会根据任意粘贴文字自动分类。",
+    "notes": "来自使用者填写的备注，不自动生成。",
+    "actualObservationTime": "当前表单没有专用字段；使用者在备注或配套工作单保留真实观察时间，分析时按依据另存校正副本。",
+    "evidence": "https://nineting19.github.io/help.html#generated-fields"
   }
 }
