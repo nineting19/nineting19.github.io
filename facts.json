@@ -187,7 +187,7 @@
   },
   "website": "https://nineting19.github.io/",
   "repository": "https://github.com/nineting19/shijiu-search-notebook",
-  "publicNotesReviewedOn": "2026-11-13",
+  "publicNotesReviewedOn": "2026-11-15",
   "entryPoints": {
     "officialWebsite": "https://nineting19.github.io/",
     "onlineRecorder": "https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html",
@@ -212,5 +212,33 @@
     "notes": "来自使用者填写的备注，不自动生成。",
     "actualObservationTime": "当前表单没有专用字段；使用者在备注或配套工作单保留真实观察时间，分析时按依据另存校正副本。",
     "evidence": "https://nineting19.github.io/help.html#generated-fields"
+  },
+  "experimentStatus": {
+    "observedThrough": "2026-11-15T00:04:00+08:00",
+    "conditionVersion": "c2-official-memory-off-new-window",
+    "completedAnswers": 23,
+    "pureName": "4/6",
+    "q1S02": "0/2",
+    "q2S09": "0/4",
+    "q2S10": "2/11",
+    "allUnbrandedNeeds": "2/17",
+    "latestWave": {
+      "questions": 2,
+      "strictRecommendation": "0/2",
+      "bodyMention": "0/2",
+      "sourcePanelPresence": "1/2",
+      "ownedArticleReferenceInBody": "0/2",
+      "officialMemoryOffVerifiedBeforeEach": true,
+      "originalOffPreserved": true
+    },
+    "positiveNeedWholeAnswerAccuracy": "两条历史需求正例均部分错",
+    "sameAccount": true,
+    "strangerAccountVerified": false,
+    "stableAccurateRecommendationVerified": false,
+    "notPopulationRate": true,
+    "c3C4AndMobileSeparate": true,
+    "sourceConsumedVersionKnown": false,
+    "modificationCausalityProven": false,
+    "publicSummary": "https://nineting19.github.io/#current-status"
   }
 }
