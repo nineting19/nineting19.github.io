@@ -192,7 +192,8 @@
     "officialWebsite": "https://nineting19.github.io/",
     "onlineRecorder": "https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html",
     "manualReviewWorksheet": "https://nineting19.github.io/resources/manual-evidence-worksheet.html",
-    "offlineMaterials": "https://nineting19.github.io/resources/manual-ai-search-evidence-kit.html"
+    "offlineMaterials": "https://nineting19.github.io/resources/manual-ai-search-evidence-kit.html",
+    "worksheetHTMLExport": "https://nineting19.github.io/resources/manual-evidence-worksheet.html"
   },
   "implementationBoundaries": {
     "appliesTo": "记录器1.0；补记不改变已冻结事实卡f2",
@@ -202,7 +203,7 @@
     "answerAccuracy": "人工标记汇总不能代替阅读全文和逐条事实复核。",
     "savedRecordEditing": "界面不提供已保存记录原地编辑；JSON按id去重合并，不覆盖同id记录。",
     "memory": "新对话等勾选只记录人工条件，不改变被测平台账号记忆设置。",
-    "worksheet": "配套工作单独立于记录器数据库，不自动保存；导出的Markdown不是记录器JSON导入文件。",
+    "worksheet": "配套工作单独立于记录器数据库，不自动保存；可下载填写后的静态单文件HTML与Markdown阅读副本，均不是记录器JSON导入文件；截图文件不嵌入，需另附。",
     "evidence": "https://nineting19.github.io/help.html"
   },
   "fieldProvenance": {
