@@ -42,7 +42,7 @@
       "id": "B08",
       "section": "基本信息",
       "item": "当前版本",
-      "value": "1.0",
+      "value": "1.0.1",
       "source": "dist/core.js、dist/app.js、dist/index.html、tests/core.test.cjs；本次实现与检查"
     },
     {
@@ -179,7 +179,7 @@
       "source": "dist/core.js、dist/app.js、dist/index.html、tests/core.test.cjs；本次实现与检查"
     }
   ],
-  "factCardVersion": "f2",
+  "factCardVersion": "f3",
   "maintainer": {
     "name": "拾玖",
     "github": "nineting19",
@@ -196,7 +196,7 @@
     "worksheetHTMLExport": "https://nineting19.github.io/resources/manual-evidence-worksheet.html"
   },
   "implementationBoundaries": {
-    "appliesTo": "记录器1.0；补记不改变已冻结事实卡f2",
+    "appliesTo": "记录器1.0.1；旧版实验记录仍按当时冻结事实卡评分",
     "screenshots": "没有截图上传、预览或附件打包；文件另存，备注可写文件名。",
     "sourceChecks": "网址格式校验与人工核验标记，不自动检测页面可达性或事实支持。",
     "csvVersions": "CSV题集／事实卡列固定为q1／f1；其他批次依据冻结输入另存校正副本，保留原导出。",
@@ -205,7 +205,7 @@
     "memory": "新对话等勾选只记录人工条件，不改变被测平台账号记忆设置。",
     "worksheet": "配套工作单独立于记录器数据库，不自动保存；可下载填写后的静态单文件HTML与Markdown阅读副本，均不是记录器JSON导入文件；截图文件不嵌入，需另附。",
     "evidence": "https://nineting19.github.io/help.html",
-    "recordAndImportLimits": "新增记录与JSON合并后最多2000条；上传文件上限3,000,000字节，解析另检查字符串长度。大记录集导出或恢复仍可能触发限制，不能把2000条视为任意长度的容量保证。",
+    "recordAndImportLimits": "记录器1.0.1：当前全部记录最多2000条，保存后的完整JSON不超过3,000,000个UTF-8字节；导入文件和合并结果也受同一总大小限制。浏览器配额可能更早触发。旧版已存在的超限历史可读取、导出并分批备份，不会自动改写；每份可独立导入，总量超限时不能重新合并到一个记录器。",
     "markdownShape": "固定分组摘要和逐条记录，不等于模型现场生成的任意表头或客户报告格式。"
   },
   "fieldProvenance": {
@@ -250,10 +250,11 @@
   "knownLimitations": {
     "reviewedOn": "2026-11-15",
     "largeRecordRoundTrip": {
-      "status": "synthetic reproduction confirmed; core fix pending",
-      "detail": "persist写入前没有匹配的累计大小检查，readStorage仍经过parseImport；大记录集可能保存后无法按现有路径重新载入，上传的UTF-8字节上限也可能早于字符上限触发。",
-      "mitigation": "保留原始JSON并控制批次大小；载入失败时先导出原始存储备份，不清理或覆盖。",
-      "reference": "https://nineting19.github.io/help.html#import-limit-scope"
+      "status": "fixed in 1.0.1; synthetic core and native browser checks passed",
+      "detail": "新保存和导入统一UTF-8字节检查与总大小检查；旧版本地超限历史可读取，不自动改写；分批JSON每份可独立导入。",
+      "remaining": "超限分批不能重新合并到同一记录器；浏览器存储配额可能先耗尽，仍需独立文件备份。",
+      "reference": "https://nineting19.github.io/resources/json-backup-and-restore.html"
     }
-  }
+  },
+  "softwareVersion": "1.0.1"
 }
