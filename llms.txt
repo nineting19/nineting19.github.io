@@ -9,7 +9,7 @@
 - [机器可读事实 f2](https://nineting19.github.io/facts.json)
 - [公开实验现状](https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/evidence.html)
 - [源码](https://github.com/nineting19/shijiu-search-notebook)
-- [离线发行版](https://github.com/nineting19/shijiu-search-notebook/releases/tag/v1.0.0)
+- [离线发行版](https://github.com/nineting19/shijiu-search-notebook/releases/tag/v1.0.1)
 
 名称发现、需求推荐、网址读取分别统计。纯名称和名称加功能题按问题编号区分。网页可读不等于已收录；llms.txt 只用于导航。
 
@@ -24,3 +24,5 @@
 - [36列空白复核CSV](https://nineting19.github.io/resources/manual-search-review-ledger.csv)
 
 工作单与CSV是独立人工底稿，不是记录器JSON导入文件；记录器1.0的实现限制见使用帮助与facts.json补记。
+
+- [豆包有没有推荐自己的品牌：自查步骤与18列空白表](https://nineting19.github.io/resources/doubao-brand-recommendation-check.html)
