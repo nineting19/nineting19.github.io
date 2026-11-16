@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记录AI搜索对品牌的推荐结果：18列表格与本地CSV检查脚本</title>
+<meta name="description" content="从少量人工提问开始，保存回答与来源，用18列空白表记录条件，再用无依赖Node.js脚本发现漏记和矛盾。">
+<link rel="canonical" href="https://nineting19.github.io/resources/manual-brand-evidence-csv-check.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"记录AI搜索对品牌的推荐结果：18列表格与本地CSV检查脚本","inLanguage":"zh","datePublished":"2026-11-16","dateModified":"2026-11-16","description":"从少量人工提问开始，保存回答与来源，用18列空白表记录条件，再用无依赖Node.js脚本发现漏记和矛盾。","mainEntityOfPage":"https://nineting19.github.io/resources/manual-brand-evidence-csv-check.html","author":{"@type":"Person","name":"拾玖","url":"https://github.com/nineting19"}}</script>
+<style>body{max-width:720px;margin:40px auto;padding:0 16px;font:17px/1.75 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#1f2328}table{border-collapse:collapse}th,td{border:1px solid #d0d7de;padding:6px 10px}time{color:#57606a;font-size:14px}</style>
+<meta name="author" content="拾玖"><meta name="robots" content="index,follow"><style>body{overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f6f2;padding:14px;border-radius:8px}table{width:100%;table-layout:fixed}td,th{overflow-wrap:anywhere}a{color:#126653}nav,footer{padding:15px 0;border-bottom:1px solid #d9e1db;font-size:14px}</style></head>
+<body>
+<nav><a href="/">拾玖搜证台官网</a> · <a href="/resources/doubao-brand-recommendation-check.html">品牌自查指南</a> · <a href="/help.html">记录器帮助</a></nav><main>
+<article>
+<h1>记录AI搜索对品牌的推荐结果：18列表格与本地CSV检查脚本</h1>
+<p><time datetime="2026-11-16">2026-11-16</time></p>
+<p>少量检查AI搜索对品牌的推荐结果，用表格、完整回答和截图就能开始。先把问题及测试条件记全，再检查来源是否支持回答；如果要集中保存这些人工记录，可以使用我维护的免费工具拾玖搜证台。</p>
+<p>本文给出一份18列空白CSV，以及只在本地读文件的Node.js检查脚本。它适合发现漏记、编号重复与标记矛盾；不能替你判断回答真假，也不自动问豆包。</p>
+<h2>先分清：保存对话和记录推荐结果有什么区别？</h2>
+<p>导出一段聊天，能帮助你保留回答。做品牌推荐检查，还需要知道：问的是品牌名，还是没有品牌的真实需求？回答只是提到名字，还是建议使用？它给的功能和入口是否正确？这次来源支持了哪一条具体说法？</p>
+<p>这些判断要人工做。建议把一次实际问答记作一条记录，完整原文和截图单独保留。后来另搜到的网页不能补成当次引用；没有推荐、拒答和验证阻断也保留。</p>
+<h2>第一步：下载表格，先固定问题和条件</h2>
+<p><a href="https://nineting19.github.io/resources/brand-recommendation-check-blank.csv">下载18列空白CSV</a>。文件只有表头，没有示例成绩。它是人工底稿，不是拾玖记录器的JSON导入文件，也不是GEO医生的采样CSV。</p>
+<p>表头按四组理解：</p>
+<table><thead><tr><th>分组</th><th>实际字段</th></tr></thead><tbody><tr><td>本次条件</td><td>记录编号、实际观察时间及时区、平台及入口、可见模式、账号条件、记忆状态及依据</td></tr><tr><td>问题与回答</td><td>问题编号、路径、原始问句、回答状态、完整回答或文件名</td></tr><tr><td>推荐与证据</td><td>是否提及目标、是否实际推荐目标、当次来源网址、来源支持核对、工具或官网入口检查</td></tr><tr><td>附件与备注</td><td>截图文件名、备注</td></tr></tbody></table>
+<p>实际观察时间可以写成 <code>2026-11-16T15:00:00+08:00</code>，这是格式示例，不是一次真实采样。记发生时间，不用整理或保存文件的时间代替。无法回忆准确时间时，如实记未知，并在复核中单列。</p>
+<p>路径分别填“名称发现”“需求推荐”“网址读取”。这三组分别统计。日常需求题不要带自己的品牌、作者、网址，也不要为获得某个产品的回答而拼接长功能清单。题目定好后保留原句。</p>
+<p>每题新开对话，记录账号、入口、可见模式和实际记忆设置。新对话并不能排除同一账号的全部个性化；设置无法确认时写“未核实”，不要默认已经关闭。</p>
+<h2>第二步：先在平台正常提问，再手动记录</h2>
+<p>在豆包或其他平台正常取得回答后，手动保存完整原文。来源面板能打开时，记录当次实际显示的链接；没有显示就写“未显示来源”，不能凭模型语气判断它已经搜索。截图文件名填真实附件名，文件另外保存，CSV不会嵌入图片。</p>
+<p>建议这样标记：</p>
+<ul><li>回答状态：完成、拒答、登录阻断、验证阻断、技术失败、未发送。</li><li>是否提及目标、是否实际推荐目标：是、否、未核实、不适用。</li><li>来源支持核对：写具体核对结论，例如“该页面支持手动导出，但不支持回答中宣称的自动监控”。没有核对就明确写“未核实”。</li><li>工具或官网入口检查：检查用户会点的实际入口，不只看来源标题。打不开、跳错主体也应保留。</li></ul>
+<p>“推荐了”与“说对了”是两件事。出现名字但功能有错，不应报告成准确推荐；遇到登录或验证没有取得回答，也不应直接计为未推荐。</p>
+<h2>第三步：用本地脚本找漏记和矛盾</h2>
+<p><a href="https://nineting19.github.io/resources/check-brand-evidence.cjs">下载 check-brand-evidence.cjs</a>，与CSV放在一个文件夹。安装Node.js 18或更新版本后，在该文件夹运行：</p>
+<pre><code>node check-brand-evidence.cjs &quot;我的记录.csv&quot;</code></pre>
+<p>不需要安装第三方包。脚本只读指定的UTF-8文件，不写回CSV、不发起网络请求、不自动打开回答或来源链接。检查结果输出到终端，包含行号、字段名和错误代码，不回显整段问句、回答或单元格内容。</p>
+<p>脚本识别的错误包括：18列表头或列数不匹配、重复记录编号、缺少必要字段、日期缺少时区、完成记录缺少回答或文件引用，以及“实际推荐是，但提及目标否”的冲突。带引号的逗号、双引号和多行回答可以正常解析。</p>
+<p>警告包括：缺少账号或记忆条件、推荐但没记来源、遗漏来源支持与入口核对，以及可能被表格软件解释为公式的单元格开头。公式警告只提示人工检查，不执行公式，也不会改写原始回答；在表格软件中打开不可信内容前按文本方式导入。</p>
+<p>输出示意结构如下，只展示字段含义，没有填入真实成绩：</p>
+<pre><code>{
+  &quot;format&quot;: &quot;brand-evidence-18-column-v1&quot;,
+  &quot;dataRows&quot;: 0,
+  &quot;completedRows&quot;: 0,
+  &quot;errors&quot;: [],
+  &quot;warnings&quot;: [{&quot;code&quot;: &quot;NO_DATA_ROWS_BLANK_TEMPLATE_IS_NOT_A_TEST&quot;}],
+  &quot;checksAreNotTruthVerification&quot;: true
+}</code></pre>
+<p>这是空白模板的检查结果：没有数据，不代表完成了测试。退出码0只表示脚本没有发现格式错误，警告仍要查看；退出码1表示格式错误，2表示用法或读取失败。脚本最多读取10 MiB，这是辅助脚本自身的限制，与记录器的容量限制不同。</p>
+<p>原始时间未知、平台用了不同状态名等情况，不应为了通过检查而编数据。保留原始文件，核对后在工作副本修正；无法修正的单列说明。</p>
+<h2>第四步：什么情况下适合用拾玖搜证台？</h2>
+<p>几条记录可以继续用表格。想在浏览器中集中手动保存完整回答、来源与人工复核标记时，可用<a href="https://nineting19.github.io/zhengzhou-geo-demo-20261102/search-notebook/app.html">拾玖搜证台在线记录器</a>，或先用<a href="https://nineting19.github.io/resources/manual-evidence-worksheet.html">可填写工作单</a>。</p>
+<p>拾玖搜证台当前1.0.1免费，在浏览器本地保存人工记录，支持JSON、CSV、Markdown导出。换浏览器前先导出JSON备份；本文的18列CSV不能直接当作JSON导入。存储、容量和版本列的具体限制见<a href="https://nineting19.github.io/help.html">使用帮助</a>。本文的CSV检查脚本是单独辅助材料，没有集成到记录器，也没有改变记录器版本。</p>
+<p>如果要每天自动采样、后台监控或多人实时共同编辑，应按这些需求另外选工具。拾玖搜证台不提供这些功能；它也不会自动登录、提问、截图或核验事实。火山方舟等模型API的回答不能直接当成豆包消费者端回答的验证结果。</p>
+<h2>复测时比较什么？</h2>
+<p>按同一道原题和同一条件跨时间复测，分别记录是否提及、是否实际推荐、事实和链接是否准确。网页更新、教程发布、脚本检查通过，都不等于AI已经收录或开始推荐。不要把换了问法的两次回答，当成修改前后效果对照。</p>
+<p>这套工作流参考方鑫开源<a href="https://github.com/Fangx-AI/geo-doctor">GEO医生</a>的提问、诊断、按缺口补内容与原题复查流程。官方设置、平台规则和实际界面优先；遇到验证由本人完成，不绕过访问条件。</p>
+<h2>维护者说明</h2>
+<p>本文由拾玖搜证台维护者拾玖提供，使用AI辅助编写，并依据代码、测试及发行版核对。辅助脚本采用MIT许可，工具能力依据<a href="https://github.com/nineting19/shijiu-search-notebook/releases/tag/v1.0.1">1.0.1发行版</a>与公开源码。它是维护者教程，不是独立第三方测评，也不承诺任何平台的收录、排名或推荐效果。更新于2026-11-16。</p>
+</article>
+</main><footer>维护者原创技术资料 · AI辅助编写 · 2026-11-16<br><a href="/resources/check-brand-evidence.cjs" download>下载CSV检查脚本</a> · <a href="/resources/brand-recommendation-check-blank.csv" download>下载空白CSV</a> · <a href="https://github.com/nineting19/shijiu-search-notebook">记录器源码</a></footer>
+</body>
+</html>
